@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto p-6">
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold text-center">Mon Tableau de Bord</h1>
+    </header>
+
+    <main>
+      <section id="statistiques" class="mb-8">
+        <h2 class="text-xl font-semibold">Statistiques de Ventes</h2>
+        <canvas id="statChart" class="bg-white shadow-md p-4 rounded-lg"></canvas>
+      </section>
+
+      <section id="produits" class="mb-8">
+        <h2 class="text-xl font-semibold">Gestion des Produits</h2>
+        <!-- Formulaire et liste des produits ici -->
+      </section>
+
+      <section id="galerie">
+        <h2 class="text-xl font-semibold">Galerie de Produits</h2>
+        <!-- Carrousel Swiper ici -->
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
