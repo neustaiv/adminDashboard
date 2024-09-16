@@ -2,34 +2,68 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tableau de bord</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Tableau de Bord</title>
+  <link href="/dist/styles.css" rel="stylesheet">
+  <!-- Polices et icônes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <div class="container mx-auto p-6">
-    <header class="mb-8">
-      <h1 class="text-3xl font-bold text-center">Mon Tableau de Bord</h1>
-    </header>
+<body class="bg-warmGray font-sans">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-terracotta text-white flex flex-col">
+      <div class="p-6">
+        <h1 class="text-3xl font-display font-bold mb-6">Mon Tableau de Bord</h1>
+        <nav>
+          <ul>
+            <li class="mb-4">
+              <a href="#accueil" class="flex items-center text-white hover:text-sand">
+                <span class="material-icons mr-2">dashboard</span>
+                <span>Accueil</span>
+              </a>
+            </li>
+            <li class="mb-4">
+              <a href="#produits" class="flex items-center text-white hover:text-sand">
+                <span class="material-icons mr-2">shopping_cart</span>
+                <span>Produits</span>
+              </a>
+            </li>
+            <li class="mb-4">
+              <a href="#statistiques" class="flex items-center text-white hover:text-sand">
+                <span class="material-icons mr-2">bar_chart</span>
+                <span>Statistiques</span>
+              </a>
+            </li>
+            <!-- Autres éléments de menu -->
+          </ul>
+        </nav>
+      </div>
+    </aside>
 
-    <main>
+    <!-- Contenu principal -->
+    <main class="flex-1 bg-warmGray p-6 overflow-auto">
+      <!-- En-tête du contenu principal -->
+      <header class="mb-6">
+        <h2 class="text-2xl font-semibold text-darkBrown">Bienvenue, Clément !</h2>
+      </header>
+
+      <!-- Sections du contenu -->
       <section id="statistiques" class="mb-8">
-        <h2 class="text-xl font-semibold">Statistiques de Ventes</h2>
+        <h2 class="text-2xl font-semibold text-darkBrown mb-4">Statistiques de Ventes</h2>
         <canvas id="statChart" class="bg-white shadow-md p-4 rounded-lg"></canvas>
       </section>
 
       <section id="produits" class="mb-8">
-        <h2 class="text-xl font-semibold">Gestion des Produits</h2>
-        <!-- Formulaire et liste des produits ici -->
+        <h2 class="text-2xl font-semibold text-darkBrown mb-4">Liste des Produits</h2>
+        <div id="products-container"></div>
       </section>
 
-      <section id="galerie">
-        <h2 class="text-xl font-semibold">Galerie de Produits</h2>
-        <!-- Carrousel Swiper ici -->
-      </section>
+      <!-- Autres sections -->
     </main>
   </div>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
