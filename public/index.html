@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Tableau de Bord</title>
-  <link href="/dist/styles.css" rel="stylesheet">
   <!-- Polices et icônes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/dist/styles.css" rel="stylesheet">
 </head>
 <body class="bg-warmGray font-sans">
   <div class="flex h-screen">
@@ -59,11 +59,18 @@
       </section>
 
       <!-- Autres sections -->
+      <form id="product-form">
+        <input type="text" id="product-name" placeholder="Nom du produit" required>
+        <input type="number" id="product-price" placeholder="Prix" required>
+        <button type="submit">Ajouter le produit</button>
+      </form>
+      
     </main>
   </div>
 
   <!-- Scripts -->
+  <script type="module" src="./app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="app.js"></script>
+
 </body>
 </html>
